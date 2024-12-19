@@ -25,7 +25,7 @@ from operation import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path("addition/",AdditionView.as_view()),
+    path("addition/",AdditionView.as_view(),name="add"),
 
     path("subtract/",SubtractionView.as_view()),
 
@@ -37,14 +37,16 @@ urlpatterns = [
 
     path("bmr/",views.BmrView.as_view()),
 
-    path("appoint/",views.AppointmentView.as_view()),
+    path("appoint/",views.AppointmentView.as_view(),name='appo'),
 
-    path("bmi/",views.BmiView.as_view()),
+    path("bmi/",views.BmiView.as_view(),name="bmi"),
 
-    path("milage/",views.MilageView.as_view()),
+    path("milage/",views.MilageView.as_view(),name='milage'),
 
     path("emi/",views.EmiView.as_view()),
 
-    path("calorie/",views.CalorieView.as_view()),
+    path("calorie/",views.CalorieView.as_view(),name="calorie"),
+
+    path("",views.IndexView.as_view(),name='index')
 
 ]

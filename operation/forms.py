@@ -94,8 +94,9 @@ class BmiForm(forms.Form):
 
 class MilageForm(forms.Form):
 
-    distance=forms.IntegerField()
-    consumption=forms.IntegerField()
+    distance=forms.IntegerField(widget=forms.NumberInput(attrs={"class":"form-control mb-3"}))
+
+    consumption=forms.IntegerField(widget=forms.NumberInput(attrs={"class":"form-control mb-3"}))
 
 #___________________________________________________________
 
